@@ -1,4 +1,27 @@
 body{
-    background: url(https://images.pexels.com/photos/695971/pexels-photo-695971.jpeg?cs=srgb&dl=pexels-ifreestock-695971.jpg&fm=jpg);
+    font-family: Verdana;
+    overflow-x: hidden;
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 150%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    width: 100%;
+    height: auto;
 }
 
+.mainpage{
+    background: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p{
+}
+
+iframe{
+    width: 50vw;
+    height: 50vh;
+}
