@@ -1,6 +1,10 @@
+:root{
+    --cover: cover;
+    --center: center
+}
+
 body{
-    background-size: cover;
-    background-position: center;
+    background-position: var(--center);
     background-repeat: no-repeat;
     font-family: Verdana;
     overflow-x: hidden;
@@ -12,10 +16,12 @@ body{
     color: white;
 }
 
-iframe, img, p, h1{
-    animation: intro 1s ease-in-out;
-    animation-delay: calc(var(--order) * 100ms);
+.mainpage{
+    background: url(images/background.jpg);
+    background-position: var(--center);
+    background-size: var(--cover);
 }
+
 
 a{
     color: red;
@@ -26,30 +32,101 @@ a:hover{
     text-decoration: none;
 }
 
-.mainpage{
-    background: url(images/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
+main{
+    padding: 1vh;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+/* MAINTEXT */
+
+main iframe, main img, main div{
+    animation: intro ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
 }
 
 .maintext{
-    padding: 1vh;
+    display: flex;
+    padding: 3vh;
     border: 0.5vh solid rgba(255, 255, 255, 0.5);
     background: rgba(255, 255, 255, 0.3);
     border-radius: 2vh;
     text-wrap: pretty;
-    width: 75%;
-    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2%;
+    text-align: left;
+    width: 75%;
+    height: 25%;
+    border-radius: 1vh;
+    margin: 2vh auto;
+}
+
+.maintext h1, .upcoming h1{
+    padding: 0;
+    margin-bottom: 0;
+}
+
+main h1{
+    margin-bottom: -4vh;
+}
+
+.maintext div{
+    width: 50%;
+}
+
+main .maintext:nth-child(1), main .maintext:nth-child(3), main .maintext:nth-child(5){
+    justify-content: left;
+    align-items: left;
     text-align: left;
 }
 
-.maintext h1{
-    padding: 0;
+main .maintext:nth-child(2), main .maintext:nth-child(4), main .maintext:nth-child(6){
+    justify-content: right;
+    align-items: right;
+    text-align: right;
 }
+
+/* MAINTEXT BACKGROUND */
+
+main .maintext:nth-child(1){
+    background: url(https://media.designcafe.com/wp-content/uploads/2019/12/20234409/christmas-decoration-ideas-tips-for-home.jpg);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+main .maintext:nth-child(2){
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl1b5L2laubxeWqXyrcRbIc2zlPMrmrAX89A&s);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+main .maintext:nth-child(3){
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVbRrMjK36lVAQtJHA1FbV15DXx1RuCCi_Ug&s);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+main .maintext:nth-child(4){
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-PEPuYdb6FWoi2DmGaJ9YPKQl6M6ZwK0d-w&s);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+main .maintext:nth-child(5){
+    background: url(https://image.jimcdn.com/app/cms/image/transf/dimension=1190x10000:format=jpg/path/sa6549607c78f5c11/image/i3b9c41fc946819aa/version/1695117079/best-christmas-ice-skating-in-europe-london.jpg);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+main .maintext:nth-child(6){
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYK3TNWXv6s_-7ms-b05cRnnuod5-QhqrJhA&s);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+/* UPCOMING GAMES */
 
 .upcoming{
     padding: 1vh;
@@ -60,41 +137,10 @@ a:hover{
 .upcoming .game{
     display: grid;
     grid-template-columns: auto auto;
-    margin-left: auto;
-    margin-right: auto;
     width: 75%;
     height: 25%;
     border-radius: 1vh;
-    margin: 2vh auto;
-}
-
-.upcoming .game:nth-child(1){
-    background: url(https://preview.redd.it/announcement-post-wallpapers-v0-7f4aonjh1p3c1.jpg?width=3440&format=pjpg&auto=webp&s=7e2f234a3dbe6c39366276ef54ed6cae20f967e2);
-    background-size: cover;
-}
-
-.upcoming .game:nth-child(2){
-    background: url(https://images.mweb.bethesda.net/_images/dtda_reveal_02.jpg?f=jpg&h=2160&w=3840&s=GjnHdAp2zcAG6sbhr7InJKlNeovRbrvPx-v-BHORmqg);
-    background-size: cover;
-}
-
-.upcoming .game:nth-child(3){
-    background: url(https://images.igdb.com/igdb/image/upload/t_1080p/scmnkm.png);
-    background-size: cover;
-}
-
-.upcoming .game:nth-child(4){
-    background: url(https://cdn.mos.cms.futurecdn.net/UJcjeBWMbymBTgQEqr29PC-1200-80.jpg);
-    background-size: cover;
-}
-
-.upcoming a div{
-    background: url(https://developer.valvesoftware.com/w/images/thumb/b/ba/CSGOErrorTextures.png/1280px-CSGOErrorTextures.png);
-    color: white;
-}
-
-.upcoming a div:hover{
-    cursor: url(images/cursor.png), default;
+    margin: 5vh auto;
 }
 
 .upcoming .game iframe, .upcoming .game img{
@@ -107,6 +153,47 @@ a:hover{
     text-shadow: black 1px 0 10px;
     padding: 1vh;
     margin-left: 5vh;
+}
+
+/* UPCOMING GAMES BACKGROUNDS */
+
+.upcoming .game:nth-child(1){
+    background: url(https://preview.redd.it/announcement-post-wallpapers-v0-7f4aonjh1p3c1.jpg?width=3440&format=pjpg&auto=webp&s=7e2f234a3dbe6c39366276ef54ed6cae20f967e2);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+.upcoming .game:nth-child(2){
+    background: url(https://images.mweb.bethesda.net/_images/dtda_reveal_02.jpg?f=jpg&h=2160&w=3840&s=GjnHdAp2zcAG6sbhr7InJKlNeovRbrvPx-v-BHORmqg);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+.upcoming .game:nth-child(3){
+    background: url(https://images.igdb.com/igdb/image/upload/t_1080p/scmnkm.png);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+.upcoming .game:nth-child(4){
+    background: url(https://cdn.mos.cms.futurecdn.net/UJcjeBWMbymBTgQEqr29PC-1200-80.jpg);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+.upcoming .game:nth-child(5){
+    background: url(https://www.kojimaproductions.jp/sites/default/files/2024-02/ds2_sop2024_screenshot009.jpg);
+    background-position: var(--center);
+    background-size: var(--cover);
+}
+
+.upcoming a .game:nth-child(1){
+    background: url(https://developer.valvesoftware.com/w/images/thumb/b/ba/CSGOErrorTextures.png/1280px-CSGOErrorTextures.png);
+    color: white;
+}
+
+.upcoming a div:hover{
+    cursor: url(images/cursor.png), default;
 }
 
 /* MUSIC PLAYER*/
@@ -138,48 +225,33 @@ iframe{
 }
 
 header, footer{
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 16%, rgba(0,255,0,1) 32%, rgba(0,255,255,1) 48%, rgba(0,0,255,1) 64%, rgba(255,0,255,1) 82%, rgba(255,0,0,1) 100%);
     animation: christmas 5s ease infinite;
-    color: black;
-    width: 100%;
-    height: auto;
-    padding: 0.1%;
     text-shadow: white 0 0 5vh;
+    background-size: 200% 200%;
+    background-clip: text;
+    color: transparent;
+    padding: 0.1%;
+    height: auto;
+    width: 100%;
 }
 
 @keyframes christmas {
     0%{
-        color: rgb(255, 0, 0)
-    }
-    16%{
-        color: rgb(255, 255, 0)
-    }
-    32%{
-        color: rgb(0, 255, 0)
-    }
-    48%{
-        color: rgb(0, 255, 255)
-    }
-    64%{
-        color: rgb(0, 0, 255)
-    }
-    82%{
-        color: rgb(255, 0, 255)
+        background-position: 0% 0%;
     }
     100%{
-        color: rgb(255, 0, 0)
+        background-position: 200% 0%;
     }
 }
 
 @keyframes intro{
     0%{
         opacity: 0%;
-        margin-left: 0%;
+        scale: 0.8
     }
-    50%{
+    40%{
         opacity: 100%;
-        margin-left: 1%;
-    }
-    100%{
-        margin-left: 0%;
+        scale: 1
     }
 }
