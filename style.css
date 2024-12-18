@@ -1,4 +1,7 @@
 body{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: Verdana;
     overflow-x: hidden;
     text-align: center;
@@ -7,8 +10,20 @@ body{
     margin: 0;
     padding: 0;
     color: white;
-    width: 100%;
-    height: auto;
+}
+
+iframe, img, p, h1{
+    animation: intro 1s ease-in-out;
+    animation-delay: calc(var(--order) * 100ms);
+}
+
+a{
+    color: red;
+    display: contents;
+}
+
+a:hover{
+    text-decoration: none;
 }
 
 .mainpage{
@@ -18,10 +33,153 @@ body{
     background-repeat: no-repeat;
 }
 
-p{
+.maintext{
+    padding: 1vh;
+    border: 0.5vh solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2vh;
+    text-wrap: pretty;
+    width: 75%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.maintext h1{
+    padding: 0;
+}
+
+.upcoming{
+    padding: 1vh;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.upcoming .game{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 25%;
+    border-radius: 1vh;
+    margin: 2vh auto;
+}
+
+.upcoming .game:nth-child(1){
+    background: url(https://preview.redd.it/announcement-post-wallpapers-v0-7f4aonjh1p3c1.jpg?width=3440&format=pjpg&auto=webp&s=7e2f234a3dbe6c39366276ef54ed6cae20f967e2);
+    background-size: cover;
+}
+
+.upcoming .game:nth-child(2){
+    background: url(https://images.mweb.bethesda.net/_images/dtda_reveal_02.jpg?f=jpg&h=2160&w=3840&s=GjnHdAp2zcAG6sbhr7InJKlNeovRbrvPx-v-BHORmqg);
+    background-size: cover;
+}
+
+.upcoming .game:nth-child(3){
+    background: url(https://images.igdb.com/igdb/image/upload/t_1080p/scmnkm.png);
+    background-size: cover;
+}
+
+.upcoming .game:nth-child(4){
+    background: url(https://cdn.mos.cms.futurecdn.net/UJcjeBWMbymBTgQEqr29PC-1200-80.jpg);
+    background-size: cover;
+}
+
+.upcoming a div{
+    background: url(https://developer.valvesoftware.com/w/images/thumb/b/ba/CSGOErrorTextures.png/1280px-CSGOErrorTextures.png);
+    color: white;
+}
+
+.upcoming a div:hover{
+    cursor: url(images/cursor.png), default;
+}
+
+.upcoming .game iframe, .upcoming .game img{
+    padding: 3vh;
+    width: 45vw;
+    height: 40vh;
+}
+
+.upcoming .game p{
+    text-shadow: black 1px 0 10px;
+    padding: 1vh;
+    margin-left: 5vh;
+}
+
+/* MUSIC PLAYER*/
+
+.music{
+    border: 0.5vh solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0.5s opacity ease;
+    overflow: hidden;
+    position: fixed;
+    border-radius: 2vh;
+    opacity: 35%;
+    margin: 2vh;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    padding: 1vh;
+    color: white;
+}
+
+.music:hover{
+    cursor: pointer;
+    opacity: 100%;
 }
 
 iframe{
-    width: 50vw;
-    height: 50vh;
+    width: 100%;
+    height: 75%;
+}
+
+header, footer{
+    animation: christmas 5s ease infinite;
+    color: black;
+    width: 100%;
+    height: auto;
+    padding: 0.1%;
+    text-shadow: white 0 0 5vh;
+}
+
+@keyframes christmas {
+    0%{
+        color: rgb(255, 0, 0)
+    }
+    16%{
+        color: rgb(255, 255, 0)
+    }
+    32%{
+        color: rgb(0, 255, 0)
+    }
+    48%{
+        color: rgb(0, 255, 255)
+    }
+    64%{
+        color: rgb(0, 0, 255)
+    }
+    82%{
+        color: rgb(255, 0, 255)
+    }
+    100%{
+        color: rgb(255, 0, 0)
+    }
+}
+
+@keyframes intro{
+    0%{
+        opacity: 0%;
+        margin-left: 0%;
+    }
+    50%{
+        opacity: 100%;
+        margin-left: 1%;
+    }
+    100%{
+        margin-left: 0%;
+    }
 }
