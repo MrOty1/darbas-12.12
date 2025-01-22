@@ -1,30 +1,26 @@
 :root{
-    --cover: cover;
-    --center: center
+    --color1: rgb(0, 195, 255);
+    --color2: rgba(255, 255, 255, 1);
 }
 
 body{
-    background-position: var(--center);
-    background-repeat: no-repeat;
-    font-family: Verdana;
+    font-family: Arial;
     overflow-x: hidden;
     text-align: center;
-    word-wrap: break-word;
-    font-size: 150%;
     margin: 0;
     padding: 0;
     color: white;
 }
 
 .mainpage{
-    background: url(images/background.jpg);
-    background-position: var(--center);
-    background-size: var(--cover);
+    background: url(images/background.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
-
 a{
-    color: red;
+    color: white;
     display: contents;
 }
 
@@ -32,226 +28,96 @@ a:hover{
     text-decoration: none;
 }
 
-
-main{
-    padding: 1vh;
-    width: 100%;
-    backdrop-filter: blur(5px);
-}
-
-/* MAINTEXT */
-
-main iframe, main img, main div{
-    animation: intro ease-in-out;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
-}
-
-.maintext{
-    display: flex;
-    padding: 3vh;
-    border: 0.5vh solid rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 2vh;
-    text-wrap: pretty;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+.tab{
     width: 75%;
-    height: 25%;
-    border-radius: 1vh;
-    margin: 2vh auto;
-}
-
-.maintext h1, .upcoming h1{
-    padding: 0;
-    margin-bottom: 0;
-}
-
-main h1{
-    margin-bottom: -4vh;
-}
-
-.maintext div{
-    width: 50%;
-}
-
-main .maintext:nth-child(1), main .maintext:nth-child(3), main .maintext:nth-child(5){
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-}
-
-main .maintext:nth-child(2), main .maintext:nth-child(4), main .maintext:nth-child(6){
-    justify-content: right;
-    align-items: right;
-    text-align: right;
-}
-
-/* MAINTEXT BACKGROUND */
-
-main .maintext:nth-child(1){
-    background: url(https://media.designcafe.com/wp-content/uploads/2019/12/20234409/christmas-decoration-ideas-tips-for-home.jpg);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-main .maintext:nth-child(2){
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl1b5L2laubxeWqXyrcRbIc2zlPMrmrAX89A&s);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-main .maintext:nth-child(3){
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVbRrMjK36lVAQtJHA1FbV15DXx1RuCCi_Ug&s);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-main .maintext:nth-child(4){
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-PEPuYdb6FWoi2DmGaJ9YPKQl6M6ZwK0d-w&s);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-main .maintext:nth-child(5){
-    background: url(https://image.jimcdn.com/app/cms/image/transf/dimension=1190x10000:format=jpg/path/sa6549607c78f5c11/image/i3b9c41fc946819aa/version/1695117079/best-christmas-ice-skating-in-europe-london.jpg);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-main .maintext:nth-child(6){
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYK3TNWXv6s_-7ms-b05cRnnuod5-QhqrJhA&s);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-/* UPCOMING GAMES */
-
-.upcoming{
-    padding: 1vh;
-    width: 100%;
-    backdrop-filter: blur(5px);
-}
-
-.upcoming .game{
     display: grid;
-    grid-template-columns: auto auto;
-    width: 75%;
-    height: 25%;
-    border-radius: 1vh;
-    margin: 5vh auto;
+    grid-template-columns: 50% 50%;
+    margin: 3vh auto;
+    background: rgba(255, 255, 255, 1);
+    font-size: 4vh;
+    border-radius: 5vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.1s;
 }
 
-.upcoming .game iframe, .upcoming .game img{
-    padding: 3vh;
-    width: 45vw;
-    height: 40vh;
+.tab:hover{
+    padding: 1% 1%;
 }
 
-.upcoming .game p{
-    text-shadow: black 1px 0 10px;
-    padding: 1vh;
-    margin-left: 5vh;
-}
-
-/* UPCOMING GAMES BACKGROUNDS */
-
-.upcoming .game:nth-child(1){
-    background: url(https://preview.redd.it/announcement-post-wallpapers-v0-7f4aonjh1p3c1.jpg?width=3440&format=pjpg&auto=webp&s=7e2f234a3dbe6c39366276ef54ed6cae20f967e2);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-.upcoming .game:nth-child(2){
-    background: url(https://images.mweb.bethesda.net/_images/dtda_reveal_02.jpg?f=jpg&h=2160&w=3840&s=GjnHdAp2zcAG6sbhr7InJKlNeovRbrvPx-v-BHORmqg);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-.upcoming .game:nth-child(3){
-    background: url(https://images.igdb.com/igdb/image/upload/t_1080p/scmnkm.png);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-.upcoming .game:nth-child(4){
-    background: url(https://cdn.mos.cms.futurecdn.net/UJcjeBWMbymBTgQEqr29PC-1200-80.jpg);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-.upcoming .game:nth-child(5){
-    background: url(https://www.kojimaproductions.jp/sites/default/files/2024-02/ds2_sop2024_screenshot009.jpg);
-    background-position: var(--center);
-    background-size: var(--cover);
-}
-
-.upcoming a .game:nth-child(1){
-    background: url(https://developer.valvesoftware.com/w/images/thumb/b/ba/CSGOErrorTextures.png/1280px-CSGOErrorTextures.png);
+.tab .text{
+    text-shadow: 0 0 1vh black;
+    padding: 5vh 5vh;
     color: white;
 }
 
-.upcoming a div:hover{
-    cursor: url(images/cursor.png), default;
+.one{
+    margin-top: 10vh;
+    background: url(images/home/one.png);
 }
 
-/* MUSIC PLAYER*/
+.two{
+    background: url(images/home/two.png);
+}
 
-.music{
-    border: 0.5vh solid rgba(255, 255, 255, 0.8);
-    background: rgba(255, 255, 255, 0.5);
-    transition: 0.5s opacity ease;
-    overflow: hidden;
+.three{
+    background: url(images/home/three.png);
+}
+
+.four{
+    background: url(images/home/four.png);
+}
+
+.five{
+    background: url(images/home/five.png);
+}
+
+.six{
+    background: url(images/home/six.png);
+}
+
+.seven{
+    background: url(images/home/seven.png);
+}
+
+.one, .two, .three, .four, .five, .six, .seven{
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+header{
     position: fixed;
-    border-radius: 2vh;
-    opacity: 35%;
-    margin: 2vh;
-    height: auto;
-    bottom: 0;
-    left: 0;
-    padding: 1vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    background: var(--color2);
+    width: 100%;
+    font-size: 2vh;
+    top: 0;
+}
+
+.headertext{
+    background: linear-gradient(135deg, var(--color1) 0%, var(--color1) 50%, var(--color2) 50%, var(--color2) 100%);
+    background-size: 300% 300%;
+    background-position: 100% 100%;
+    transition: 0.5s;
+    color: black;
+}
+
+.headertext:hover{
+    background-position: 0% 0%;
     color: white;
 }
 
-.music:hover{
-    cursor: pointer;
-    opacity: 100%;
-}
-
-iframe{
-    width: 100%;
-    height: 75%;
-}
-
-header, footer{
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 16%, rgba(0,255,0,1) 32%, rgba(0,255,255,1) 48%, rgba(0,0,255,1) 64%, rgba(255,0,255,1) 82%, rgba(255,0,0,1) 100%);
-    animation: christmas 5s ease infinite;
-    text-shadow: white 0 0 5vh;
-    background-size: 200% 200%;
-    background-clip: text;
-    color: transparent;
-    padding: 0.1%;
-    height: auto;
+footer{
+    padding: 1% 1%;
+    font-size: 6vh;
+    background: white;
+    color: black;
     width: 100%;
 }
 
-@keyframes christmas {
-    0%{
-        background-position: 0% 0%;
-    }
-    100%{
-        background-position: 200% 0%;
-    }
-}
-
-@keyframes intro{
-    0%{
-        opacity: 0%;
-        scale: 0.8
-    }
-    40%{
-        opacity: 100%;
-        scale: 1
-    }
+a:has(footer:hover){
+    cursor: url(images/cursor.png), default;
 }

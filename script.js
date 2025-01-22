@@ -1,13 +1,9 @@
-var myAudio = document.getElementById("myAudio");
-var isPlaying = false;
-
-function togglePlay() {
-  isPlaying ? myAudio.pause() : myAudio.play();
-};
-
-myAudio.onplaying = function() {
-  isPlaying = true;
-};
-myAudio.onpause = function() {
-  isPlaying = false;
-};
+const easterEgg = () => {
+    let rngNumber = Math.floor(Math.random() * 10);
+    if(rngNumber == Math.floor(Math.random() * 10)){
+        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '_blank').focus();
+        return
+    }else{
+        alert("Try Again!")
+    }
+}
